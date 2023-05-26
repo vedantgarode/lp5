@@ -125,14 +125,14 @@ void Graph::dfs(int start) {
 
 int main() {
     Graph g(7); // create a graph with 7 vertices
-    g.addEdge(0, 1); // root node
-    g.addEdge(0, 2);
-    g.addEdge(1, 3);
-    g.addEdge(1, 4);
-    g.addEdge(2, 5);
-    g.addEdge(2, 6);
-
-
+    int a , b , n;
+    cout << "Enter number of edges :";
+    cin >> n ;
+    cout << "Enter edges in from --> to in single line : \n";
+    while(n--){
+        cin >>a  >>b ;
+         g.addEdge(a,b);
+    }
     // Call BFS and display complete traversal route
 cout << "BFS Traversal: ";
 g.bfs(0);
